@@ -1,0 +1,35 @@
+{
+	"app_name": "Kulona Amni",
+	"screens": {
+		"choose_language": {
+			"title": "Choose Language",
+			"subtitle": "Please select your preferred langauge  ",
+			"next_btn": "Next"
+		},
+		"phone": {
+			"title": "Welcome to Kulona Amni",
+			"subtitle": "Enter your mobile number to get verified",
+			"next_btn": "Next",
+			"phone": "Phone",
+			"name": "Name",
+			"send_the_code_btn": "Send the code"
+		},
+		"verify": {
+			"title": "Phone Verification",
+			"subtitle": "Please enter otp to verify your mobile number and get started !!",
+			"next_btn": "Next",
+			"verify_phone_number": "Verify Phone Number",
+			"edit_phone_number": "Edit Phone Number?"
+		},
+		"dashboard": {
+			"home": "Home",
+			"report": "Report",
+			"notifications": "Notifications",
+			"profile": "Profile",
+			"settings": "Settings",
+			"help": "Help",
+			"ticket": "Ticket",
+			"description": "Description"
+		}
+	}
+}

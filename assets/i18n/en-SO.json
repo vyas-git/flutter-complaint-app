@@ -1,0 +1,35 @@
+{
+	"app_name": "Kulona Amni",
+	"screens": {
+		"choose_language": {
+			"title": "Dooro Luuqad",
+			"subtitle": "Fadlan door luqadda aad doorbidayso",
+			"next_btn": "Xiga"
+		},
+		"phone": {
+			"title": "Ku soo dhawaada Kulona Amni",
+			"subtitle": "Geli lambarkaaga mobaylka si loo xaqiijiyo",
+			"next_btn": "Xiga",
+			"phone": "Taleefanka",
+			"name": "Magaca",
+			"send_the_code_btn": "Soo dir furaha"
+		},
+		"verify": {
+			"title": "Xaqiijinta Taleefanka",
+			"subtitle": "Fadlan geli otp si aad u xaqiijiso lambarkaaga mobaylka oo aad bilowdo !!",
+			"next_btn": "Xiga",
+			"verify_phone_number": "Xaqiiji lambarka taleefanka",
+			"edit_phone_number": "Wax ka beddel lambarka taleefanka?"
+		},
+		"dashboard": {
+			"home": "Guriga",
+			"report": "Warbixin",
+			"notifications": "Ogeysiisyada",
+			"profile": "Profile",
+			"settings": "Dejinta",
+			"help": "I caawi",
+			"ticket": "Tigidh",
+			"description": "Sharaxaada"
+		}
+	}
+}

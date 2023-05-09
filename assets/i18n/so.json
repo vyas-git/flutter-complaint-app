@@ -1,0 +1,9 @@
+{
+	"screens": {
+		"choose_language": {
+			"title": "Dooro Luuqad",
+			"subtitle": "Fadlan door luqadda aad doorbidayso",
+			"next_btn": "Xiga"
+		}
+	}
+}

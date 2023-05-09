@@ -1,0 +1,35 @@
+{
+	"app_name": "كولونا امني",
+	"screens": {
+		"choose_language": {
+			"title": "اختر اللغة",
+			"subtitle": "الرجاء تحديد اللغة المفضلة لديك",
+			"next_btn": "التالي"
+		},
+		"phone": {
+			"title": "مرحبا بكم في كولونا امني",
+			"subtitle": "أدخل رقم هاتفك المحمول ليتم التحقق منها",
+			"next_btn": "التالي",
+			"phone": "هاتف",
+			"name": "اسم",
+			"send_the_code_btn": "أرسل الرمز"
+		},
+		"verify": {
+			"title": "التحقق من الهاتف",
+			"subtitle": "الرجاء إدخال otp للتحقق من رقم هاتفك المحمول والبدء!!",
+			"next_btn": "التالي",
+			"verify_phone_number": "تحقق من رقم الهاتف",
+			"edit_phone_number": "تحرير رقم الهاتف؟"
+		},
+		"dashboard": {
+			"home": "بيت",
+			"report": "تقرير",
+			"notifications": "إشعارات",
+			"profile": "حساب تعريفي",
+			"settings": "إعدادات",
+			"help": "يساعد",
+			"ticket": "تذكرة",
+			"description": "وصف"
+		}
+	}
+}
