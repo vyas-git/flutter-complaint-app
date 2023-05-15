@@ -1,50 +1,95 @@
 import 'package:flutter/material.dart';
-import 'package:kulona_amni/constants/colors.dart';
-import 'package:easy_localization/easy_localization.dart';
 
-class HomeTab extends StatefulWidget {
-  @override
-  _HomeTabState createState() => _HomeTabState();
-}
-
-class _HomeTabState extends State<HomeTab> {
-  final List<Ticket> _tickets = [
-    Ticket(
-        title: 'screens.dashboard.ticket'.tr(), description: 'Description 1'),
-    Ticket(title: 'Ticket 2', description: 'Description 2'),
-    Ticket(title: 'Ticket 3', description: 'Description 3'),
-    Ticket(title: 'Ticket 4', description: 'Description 4'),
-    Ticket(title: 'Ticket 5', description: 'Description 5'),
-  ];
-
+class TicketListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [kSecondaryColor, Colors.grey.shade500],
-        ),
-      ),
-      child: ListView.builder(
-        itemCount: _tickets.length,
-        itemBuilder: (BuildContext context, int index) {
-          return ListTile(
-            title:
-                Text('screens.dashboard.ticket'.tr() + " " + index.toString()),
-            subtitle: Text('screens.dashboard.description').tr(),
-          );
+      body: ListView.builder(
+        itemCount: TicketData.tickets.length,
+        itemBuilder: (context, index) {
+          return TicketItem(ticket: TicketData.tickets[index]);
         },
       ),
-    ));
+    );
   }
 }
 
 class Ticket {
   final String title;
-  final String description;
+  final String details;
+  final String date;
 
-  Ticket({required this.title, required this.description});
+  Ticket({required this.title, required this.details, required this.date});
+}
+
+class TicketData {
+  static List<Ticket> tickets = [
+    Ticket(
+      title: 'Property Damage',
+      details:
+          'Sarah Davis was witnessed defacing public property in a local park. She was caught spray painting graffiti on the walls of a restroom facility.',
+      date: 'May 20, 2023',
+    ),
+    Ticket(
+      title: 'Reckless Driving',
+      details:
+          'Michael Thompson was observed driving recklessly on the highway, weaving in and out of lanes, and disregarding traffic signals',
+      date: 'May 25, 2023',
+    ),
+    Ticket(
+      title: 'Speeding Violation',
+      details:
+          'Was caught exceeding the posted speed limit of 60 mph in a 45 mph zone on Main Street.',
+      date: 'May 25, 2023',
+    ),
+    // Add more tickets here...
+  ];
+}
+
+class TicketItem extends StatelessWidget {
+  final Ticket ticket;
+
+  TicketItem({required this.ticket});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      padding: EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(8),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.3),
+            spreadRadius: 2,
+            blurRadius: 5,
+            offset: Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            ticket.title,
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: 8),
+          Text(
+            ticket.details,
+            style: TextStyle(fontSize: 16),
+          ),
+          SizedBox(height: 8),
+          Text(
+            'Date: ${ticket.date}',
+            style: TextStyle(fontSize: 16),
+          ),
+        ],
+      ),
+    );
+  }
 }

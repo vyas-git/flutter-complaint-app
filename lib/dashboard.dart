@@ -3,6 +3,8 @@ import 'package:kulona_amni/constants/colors.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 import 'home.dart';
+import 'report.dart';
+import 'notification.dart';
 
 class DashboardScreen extends StatefulWidget {
   @override
@@ -12,9 +14,9 @@ class DashboardScreen extends StatefulWidget {
 class _DashboardScreenState extends State<DashboardScreen> {
   int _selectedIndex = 0;
   final List<Widget> _widgetOptions = <Widget>[
-    HomeTab(),
-    ReportTab(),
-    NotificationsTab(),
+    TicketListScreen(),
+    ReportScreen(),
+    NotificationListScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -90,23 +92,5 @@ class _DashboardScreenState extends State<DashboardScreen> {
             currentIndex: _selectedIndex,
             selectedItemColor: kPrimaryColor,
             onTap: _onItemTapped));
-  }
-}
-
-class ReportTab extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text('Report Tab'),
-    );
-  }
-}
-
-class NotificationsTab extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text('Notifications Tab'),
-    );
   }
 }
